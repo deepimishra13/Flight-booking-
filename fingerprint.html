@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wayu Yaan</title>
+    <!-- font awsome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  
+  <style> 
+    :root {
+    --blue:#07c5f0;
+      }
+    *{
+    font-family:'Gill Sans MT';
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    }
+::selection{
+    background:var(--blue);
+    color:#fff;
+    }
+html{
+    font-size: 36%;
+    overflow-x:hidden;
+    scroll-padding-top:2rem;
+    scroll-behavior: smooth;
+}
+.btn{
+display: inline-block;
+margin-top:1rem ;
+background: var(--blue);
+color:rgb(4, 7, 8) ;
+padding: .5rem .5rem;
+border: 2rem solid var(--blue);
+cursor: pointer;
+font-size: 2.5rem;
+}
+.btn:hover{
+    background: rgba(1, 58, 68, 0.2);
+    color: var(--blue);
+      }
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background-color: rgb(2, 9, 76);
+   
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 2rem 9%;
+}
+header .logo {
+    font-size:5rem;
+    font-weight: bolder;
+    color:#fff;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+header .logo span{
+    color:var(--blue)
+}
+header .navbar a{
+    font-size:2.5rem ;
+    color:#fff;
+    margin: 2rem; 
+    font-family:Georgia, 'Times New Roman', Times, serif
+    }
+header .navbar a:hover{
+    color:var(--blue);
+    }
+header .icons i{
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 2.5rem;
+}
+header .icons i:hover{
+    color:var(--blue)
+}
+header .search-bar-container{
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    padding:1rem 2rem;
+    background: rgb(2, 9, 76);
+    border-top: 1rem solid rgba(255,255,255,.2);
+    align-items: center;
+    z-index: 1001;
+    clip-path: polygon(0 0,100% 0,0 0);
+}
+header .search-bar-container.active{
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+}
+header .search-bar-container #search-bar{
+    width:97%;
+    padding: 1.5rem;
+    text-transform: none;
+    color:rgb(2, 9, 76);
+    font-size: 2.7rem;
+    border-radius: 1rem;
+}
+header .search-bar-container label{
+    color: #fff;
+    cursor: pointer;
+    font-size: 3rem;
+    margin-left: 1.5rem;
+}
+header .search-bar-container label:hover{
+    color:var(--blue)
+}
+
+/*biometric*/
+.bio-login-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border:#fff;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 450px;
+            height: 200px;
+            margin-top: 250px;
+            
+        }
+
+        .bio-login-btn:hover {
+            background-color: #45a049;
+        }
+
+        .fingerprint-icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        img {
+            width:60px;
+            height:50px;
+        }
+
+        .error-message {
+            color: red;
+            font-size:15px;
+            text-align: center;
+            margin-top: 5px;
+            
+        }
+
+
+
+
+
+
+
+
+/*social media icons code start*/
+
+.footerclass{
+    position: absolute;
+    width: 100%;
+    padding-top: 50px;
+    height: 130px;
+    padding: 20px;
+    background: black;
+    margin-top: 90px;
+}
+
+.footerclass a{
+    font-size: 15px;
+    word-spacing: 20px;
+    color:  rgb(131, 127, 127);
+    font-family: 'Bell MT';
+    
+}
+
+.footerclass .fa {
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%
+    
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa {
+ 
+    color: white;
+  }
+
+
+/*footer end*/
+
+    
+    </style>
+
+</head>  
+
+<body>
+    <!--header starts-->
+<header>
+
+
+    <a href="index.html" class="logo"> Wayu <span>Yaan</span></a>
+
+    <nav class="navbar">
+        <a href="index.html">HOME   </a>
+        <a href="flight.HTML">FLIGHT  </a>
+        <a href="booking.HTML">BOOKING </a>
+        <a href="payment.html"> PAYMENT </a>
+        <a href="register.html">REGISTER</a>
+      
+
+    </nav>
+
+    <div class="icons">
+            
+            <a href="LOGIN.HTML"><i class="fas fa-user" id="login-btn"> </i> </a>
+
+    </div>
+            
+
+</header>
+
+ <!-- Fingerprint Login Button -->
+        <button class="bio-login-btn" id="biometric-login">
+            <span class="fingerprint-icon">
+                <img src="C:\\Users\\HP\\Pictures\\website pic\\biometric.jpeg"></span>
+                <br> Fingerprint Login
+        </button>
+        
+        <div class="error-message" id="error-message" style="display: none;">
+            <p>Fingerprint authentication failed. Please try again.</p>
+        </div>
+    </div>
+<script>
+    // Simulating the fingerprint authentication process
+    document.getElementById('biometric-login').addEventListener('click', function() {
+            // This would normally call a backend service that integrates with WebAuthn, for example\par
+            console.log('Fingerprint login initiated...');
+
+            // Simulating success/failure (For demo purposes)\par
+            const fingerprintSuccess = Math.random() > 0.5; // Random success/failure\par
+
+            if (fingerprintSuccess) {
+                alert("Fingerprint authentication successful!");
+            
+            } else {
+                document.getElementById('error-message').style.display = 'block';
+            }
+        });
+    </script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="footerclass">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <center>
+        <a href="index.html">HOME   </a>
+        <a href="flight.HTML"> FLIGHT</a>&nbsp;&nbsp;
+        <a href="booking.HTML">BOOKING </a>
+        <a href="payment.html">PAYMENT</a> &nbsp;&nbsp;
+        <a href="register.html">REGISTER</a> 
+        
+
+  <br>
+        <!-- Add font awesome icons -->
+  <i class="fa fa-facebook"></i>
+  <i class="fa fa-twitter"></i>
+  <i class="fa fa-youtube"></i>
+  <i class="fa fa-instagram"></i>
+  <i class="fa fa-pinterest"></i>
+        <br>
+    <a>    @COPYRIGHT</a>
+        </center>
+  </div>
+
+</body>
+</html>
